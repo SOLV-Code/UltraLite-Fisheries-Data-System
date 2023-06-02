@@ -1,0 +1,29 @@
+Years,Component,Change_Event
+1980-1983,All,Project feasibility studies conducted.
+1985,Sonar,Initial set up using BioSonics 420 kHz with 20 min sampling duration with a -32 dB detection threshold. Report periods were 3-9 days to obtain minimum sample of 120 fish at each site. Transducers were aimed 15 deg downstream to determine direction of travel. Counts within sectors were expanded for the proportion of the water column covered. Left bank strata required 2 transducers deployed at different ranges.
+1985,Test Fishery,"Used 4 mesh sizes: 101.6 mm (4.0 in), 139.7 mm (5.5 in), 162.0 mm (6.38 in), and 215.9 mm (8.5 in) 45.7 m (150 ft) . Sampled 4 strata, (left bank nearshore, left bank offshore, right bank bottom, right bank surface),"
+1986,Test Fishery,"6 Mesh sizes utilized 101.6 mm (4.0 in), 127.0 mm (5.0 in), 139.7 mm (5.5 in), 165.1 mm (6.5 in), 190.5 mm (7.5 in), and 215.9 mm (8.5 in). All were 45.7 m (150 ft) long and 7.6 m (25 ft) deep."
+1988,Test Fishery,Did not adjust catches for selectivity (this was 1988 only).
+1989,Test Fishery,Methodology consistent with 1986.
+1990,Test Fishery,"Spatial expansion based on the proportion of the water column ensonified was discontinued. 8.5in and 7.5indrifted twice per bank per period, other nets drifted once per bank. Stopped fishing 8.5in and 7.5in nets after July 25. Net selectivity methodology improved from previous, used McCombie and Fry method (1960) for Chinook and chum salmon and Holt (Peterson 1966) for coho salmon, pink salmon, and whitefish. Began computing sample variance for the estimates. SAS used to generate estimates."
+1991,Test Fishery,First year 70 mm (2.75 in) net fished
+1992,Sonar,Project only operated a partial season and savings used to purchase 120kHz equipment
+1993,Sonar,Sonar frequency changed from 420 kHz to 120 kHz to detect fish at greater ranges. Individual sonar stratum were sampled in 15 min periods (was 20 min previously). Sonar operated 24 hrs/day 4 times during the season. No expansion for fish beyond the counting range using down looking fathometer Log-normal curves used to describe selectivity.
+1995,Test Fishery,"Utilized a single stratum on the right bank.  The project has always utilized a single stratum (or test fish zone) for the apportionment of the sonar counts on the right bank.  Although there were a couple years (2008 and 2009) where another test fish zone was fished to bolster Chinook catches for GSI, this data was not used in the apportionment of sonar counts."
+1995,Sonar,No longer used the angle of traces to distinguish downstream from upstream fish. All traces were considered upstream.
+1996,Sonar and  TF,Project did not produce estimates and operated for training purposes only.
+1997,Test Fishery,140 mm (5.5 in) mesh added in the fall when 7.5 in and 8.5 in discontinued.
+1998,Sonar,Sampled 3 sonar strata on right bank.
+1998,Test Fishery,"Discontinued the 127.0 mm (5.0 in) and 165.1 mm (5.5 in) nets, used 133 mm (5.25 in). 
+"
+1999,Test Fishery,"In the fall season, discontinued 215.0 mm (8.5 in) and 133 mm (5.25 in) nets and added 146 mm (5.75 in) and 127 mm (5.0 in)."
+2001,Sonar,Transitioned to HTI split-beam equipment. Frequency kept at 120 kHz and still marked fish using paper charts.
+2004,Sonar,Changed selectivity model to use Pearson-T curve.
+2005,Sonar,Incorporated the DIDSON into left bank sampling for the first 20 m.
+2009,Sonar,Transitioned from marking fish on paper charts to electronic echograms.
+2010,Test Fishery,Tested 50 fathom nets during summer season. Alternated 25 fathom and 50 fathom by test fishing period.
+2010,Sonar,Preliminary testing of side-scan sonar for use offshore during periods of extreme turbidity.
+2011,Test Fishery,Discontinued the 50 fathom nets and resumed normal test fishing operations.
+2011,Sonar,Final year of side-scan testing.
+2015,Sonar,Switched from DIDSON to ARIS on the left bank sampling the entire stratum 3 (0-50 m).
+2016,Sonar,Updated selectivity parameters for all species and implemented a minimum selectivity threshold of 0.1.
