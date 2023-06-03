@@ -1,12 +1,12 @@
-ProjSeq,Table,DataStatus,Stock,Coverage,SurveyType,Project,ProjLabel,ProjLabelFrench,Watershed,WSShort,Site,DataNotes,,,,,,,,,,,DataInReport
-1,Yes,Incorporated,All,Mainstem,Sonar,PilotStation,Pilot Sonar,Station Pilot,Mainstem,Mainstem,Lower River,TBI,,,,,,,,,,,
-3,Yes,Incorporated,Lower,Tributary,Weir,AndreafskyWeir,Andy Weir,Déversoir Andreafsky,Andreafsky,Andreafsky,Andreafsky Mainstem,TBI,,,,,,,,,,,
-4,Yes,Incorporated,Lower,Tributary,Aerial,AndreafskyEastAerial,Andy E Air,RA Andreafsky - Est,Andreafsky,Andreafsky,Andreafsky East Fork,Only total count available,,,,,,,,,,,
-5,Yes,Incorporated,Lower,Tributary,Aerial,AndreafskyWestAerial,Andy W Air,RA Andreafsky - Ouest,Andreafsky,Andreafsky,Andreafsky West Fork,Using standard count (years with only total count are NA),,,,,,,,,,,
-6,Yes,Incorporated,Lower,Tributary,Aerial,AnvikAerial,Anvik Air,RA Anvik,Anvik,Anvik,,,,,,,,,,,,,
-14,Yes,Incorporated,Middle,Tributary,Weir,HenshawWeir,Henshaw Weir,Déversoir Henshaw,Koyukuk,Koyukuk,,Have file with daily counts. Should I just sum them up?,,,,,,,,,,,
-15,Yes,Incorporated,Middle,Tributary,MR,RadioMRTanana,Tanana Radio,Radio Tanana,Tanana,Tanana,,,,,,,,,,,,,
-22,Yes,Incorporated,Canada,Mainstem,Sonar,EagleSonar,Eagle Sonar,Sonar Eagle,Mainstem,Mainstem,Border,TBI,,,,,,,,,,,
-23,Yes,Incorporated,Canada,Mainstem,MR,BorderMR,Border MR,MR frontière,Mainstem,Mainstem,,,,,,,,,,,,,
-40,Yes,Incorporated,Canada,Tributary,Aerial,WolfAerial,Wolf Air,RA Wolf,Teslin Headwaters,Teslin HW,Wolf,,,,,,,,,,,,
-41,Yes,Incorporated,Canada,Porcupine,Sonar,PorcupineSonar,Porcup Sonar,Sonar Porcupine,Porcupine,Porcupine,Above Border,,,,,,,,,,,,
+ProjSeq,Table,DataStatus,Stock,Coverage,SurveyType,Project,ProjLabel,ProjLabelFrench,Watershed,WSShort,Site,DataNotes
+1,Yes,Published in Pestal et al. 2022,All,Mainstem,Sonar,PilotStation,Pilot Sonar,Station Pilot,Mainstem,Mainstem,Lower River,TBI
+3,Yes,Published in Pestal et al. 2022,Lower,Tributary,Weir,AndreafskyWeir,Andy Weir,Déversoir Andreafsky,Andreafsky,Andreafsky,Andreafsky Mainstem,TBI
+4,Yes,Published in Pestal et al. 2022,Lower,Tributary,Aerial,AndreafskyEastAerial,Andy E Air,RA Andreafsky - Est,Andreafsky,Andreafsky,Andreafsky East Fork,Only total count available
+5,Yes,Published in Pestal et al. 2022,Lower,Tributary,Aerial,AndreafskyWestAerial,Andy W Air,RA Andreafsky - Ouest,Andreafsky,Andreafsky,Andreafsky West Fork,Using standard count (years with only total count are NA)
+6,Yes,Published in Pestal et al. 2022,Lower,Tributary,Aerial,AnvikAerial,Anvik Air,RA Anvik,Anvik,Anvik,,
+14,Yes,Published in Pestal et al. 2022,Middle,Tributary,Weir,HenshawWeir,Henshaw Weir,Déversoir Henshaw,Koyukuk,Koyukuk,,Have file with daily counts. Should I just sum them up?
+15,Yes,Published in Pestal et al. 2022,Middle,Tributary,MR,RadioMRTanana,Tanana Radio,Radio Tanana,Tanana,Tanana,,
+22,Yes,Published in Pestal et al. 2022,Canada,Mainstem,Sonar,EagleSonar,Eagle Sonar,Sonar Eagle,Mainstem,Mainstem,Border,TBI
+23,Yes,Published in Pestal et al. 2022,Canada,Mainstem,MR,BorderMR,Border MR,MR frontière,Mainstem,Mainstem,,
+40,Yes,Published in Pestal et al. 2022,Canada,Tributary,Aerial,WolfAerial,Wolf Air,RA Wolf,Teslin Headwaters,Teslin HW,Wolf,
+41,Yes,Published in Pestal et al. 2022,Canada,Porcupine,Sonar,PorcupineSonar,Porcup Sonar,Sonar Porcupine,Porcupine,Porcupine,Above Border,
