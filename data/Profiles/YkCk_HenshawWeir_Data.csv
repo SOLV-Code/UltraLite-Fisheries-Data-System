@@ -1,0 +1,29 @@
+# Annual estimates of Henshaw Creek  Chinook Escapement,,,,,,,,,,,,
+# Overview of site and current methods at ??ANY??,,,,,,,,,,,,
+# Year = Run year,,,,,,,,,,,,
+# Estimate = run size of XYZ Chinook at in the Salcha River,,,,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes,StartDate,EndDate,DaysActive
+2000,193,Weir,NA,NA,NA,NA,NA,TRUE,NA,2000-07-08,2000-08-13,36
+2001,1091,Weir,NA,NA,NA,NA,NA,TRUE,NA,2001-07-01,2001-08-12,42
+2002,649,Weir,NA,NA,NA,NA,NA,TRUE,NA,2002-06-29,2002-08-02,34
+2003,748,Weir,NA,NA,NA,NA,NA,TRUE,NA,2003-06-26,2003-08-05,40
+2004,1247,Weir,NA,NA,NA,NA,NA,TRUE,NA,2004-06-21,2004-08-06,46
+2005,1059,Weir,NA,NA,NA,NA,NA,TRUE,NA,2005-07-01,2005-08-08,38
+2006,NA,Weir,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2007,740,Weir,NA,NA,NA,NA,NA,TRUE,NA,2007-06-28,2007-07-31,33
+2008,766,Weir,NA,NA,NA,NA,NA,TRUE,NA,2008-07-02,2008-08-08,37
+2009,1637,Weir,NA,NA,NA,NA,NA,TRUE,NA,2009-07-05,2009-08-07,33
+2010,857,Weir,NA,NA,NA,NA,NA,TRUE,4 days with high water were filled in with linear interpolation,2010-06-23,2010-08-08,46
+2011,1796,Weir,NA,NA,NA,NA,NA,TRUE,NA,2011-07-03,2011-08-02,30
+2012,922,Weir,NA,NA,NA,NA,NA,TRUE,NA,2012-06-30,2012-08-04,35
+2013,772,Weir,NA,NA,NA,NA,NA,TRUE,5 days with high water were filled in with linear interpolation,2013-06-30,2013-08-05,36
+2014,NA,Weir,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2015,2391,Weir,NA,NA,NA,NA,NA,TRUE,NA,2015-06-24,2015-08-05,42
+2016,1354,Weir,NA,NA,NA,NA,NA,TRUE,1 day with high water was filled in with linear interpolation,2016-06-26,2016-08-01,36
+2017,677,Weir,NA,NA,NA,NA,NA,TRUE,NA,2017-06-25,2017-07-30,35
+2018,NA,Weir,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2019,441,Weir,NA,NA,NA,NA,NA,TRUE,1 day with smoke was filled in with linear interpolation,2019-06-30,2019-08-02,33

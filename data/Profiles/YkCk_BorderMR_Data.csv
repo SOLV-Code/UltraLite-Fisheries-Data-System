@@ -1,0 +1,33 @@
+# Annual estimates of Border Passage Using Mark-Recapture at Bio Island,,,,,,,,,,
+# Year = Run year,,,,,,,,,,
+# Estimate = run size of all  Chinook Estimates verified by Vesta Mather DFO in Sep 2021,,,,,,,,,,
+# SE = Standard Error estimates of SE based on Chapman Peterson Conf. Int. were contributed by Catherine Bradley AK FWS in Sep 2021,,,,,,,,,,
+# ,,,,,,,,,,
+Year,Estimate,SE,p10,p90,Variance,CV,Type,Use,UseNotes,Revision Notes
+1982,32951.89655,4256.505988,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,Revised by Vesta Mather Aug 20 20021
+1983,42970.70506,2379.146203,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,Revised by Vesta Mather Aug 20 20021
+1984,43911,,NA,NA,NA,NA,Other,FALSE,Not a MR estimate. Using CDN Harvest + Aerial Survey Index Expansion,
+1985,30933.24215,1221.444849,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,Revised by Vesta Mather Aug 20 20021
+1986,36478.50213,1490.776549,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1987,29684.5123,1635.962235,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,Revised by Vesta Mather Aug 20 20021
+1988,44444.9027,2725.522069,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1989,47013.11675,3302.661331,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,Revised by Vesta Mather Aug 20 20021
+1990,56678.88982,3717.969407,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1991,41187.01097,2036.828956,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1992,43185.31453,2096.799467,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1993,45027.02863,2815.306706,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1994,45230.53003,2602.270997,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1995,52352.76513,2523.144778,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1996,47955.21176,2618.396937,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1997,53399.92419,3829.83991,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
+1998,22588,NA,NA,NA,NA,NA,MR,TRUE,"Chapman/Peterson, source data for SE calculation not available.",Revised by Vesta Mather Aug 20 20021
+1999,23716,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2000,16173,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2001,52207,NA,NA,NA,NA,NA,MR,TRUE,SPAS  ,
+2002,49214,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2003,56929,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2004,48111,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2005,42245,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2006,36748,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2007,22120,NA,NA,NA,NA,NA,MR,TRUE,SPAS ,
+2008,14666,1588.32579,NA,NA,NA,NA,MR,TRUE,Chapman/Peterson,
