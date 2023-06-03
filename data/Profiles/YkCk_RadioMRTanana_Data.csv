@@ -1,0 +1,12 @@
+#Annual estimates of Canadian Stock Abundance Based on Radio Mark Recapture,,,,,,,,,
+#Year = Run year,,,,,,,,,
+#Estimate = run size of all  Chinook  using Canada Estimate from file 2000_2004_MR.csv provided by Zach Liller,,,,,,,,,
+#SE = Standard Error calculated based on INSERT,,,,,,,,,
+#p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+#Variance  = Calculated based on INSERT,,,,,,,,,
+#CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+#TEST,,,,,,,,,
+Year,Type,Estimate,SE,p10,p90,Variance,CV,Use,UseNotes
+2002,MR,33167,2264.742811,NA,NA,NA,NA,TRUE,Sum of large (>650) and small estimates
+2003,MR,93629,4477.671828,NA,NA,NA,NA,TRUE,Sum of large (>650) and small estimates
+2004,MR,97615,4854.165222,NA,NA,NA,NA,TRUE,Sum of large (>520) and small estimates
