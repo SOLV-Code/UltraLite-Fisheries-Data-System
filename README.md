@@ -14,7 +14,7 @@ The approach was originally developed for compiling and maintaining data for Yuk
 *Important: This repository is just an illustration of the basic building blocks: data format, folder structure, and data processing code. The full implementation for Yukon Chinook includes extensive diagnostic plots and an automated summary report created with [csasdown](https://github.com/pbs-assess/csasdown).*
 
 
-**The example files in this repository are a subset of the published information in [Pestal et al. 2022](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf)). THIS IS NOT A COMPLETE OR UP-TO-DATE DATASET FOR YUKON CHINOOK!** These files are used to illustrate the real-life level of detail that was compiled to document the context for each time series.
+**The example files in this repository are a subset of the published information in [Pestal et al. (2022)](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf). THIS IS NOT A COMPLETE OR UP-TO-DATE DATASET FOR YUKON CHINOOK!** These files are used to illustrate the real-life level of detail that was compiled to document the context for each time series.
 
 
 ## Get Started
@@ -30,7 +30,7 @@ If familiar with RStudio and git, just clone this repository
 
 Text
 
-"bite-size csv files
+"bite-size csv files"  shareable, little memory, no version/OS issues
 
 code to merge/check/organize
 
@@ -38,7 +38,13 @@ code to merge/check/organize
 
 Basic components of  a relational data base like MS Access (individual tables, linked through queries, except that the tables are individual csv files and the queries are R scripts. However, contributors 
 
-clearmprocess around changes: -> commit messages -> example
+clear process around changes: -> commit messages, branches -> example
+
+
+MERGE CODE
+summary code
+
+simple example of automated report (to word doc)
 
 
 ## Structure
