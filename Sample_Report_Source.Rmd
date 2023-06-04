@@ -17,6 +17,11 @@ library(tidyverse)
 proj.info.df <-  read.csv("data/Profiles/ProjectInfo_Lookup.csv",stringsAsFactors = FALSE)
 
 main.data.df <-  read.csv("data/DerivedData/ProjectData_MainFile.csv", stringsAsFactors = FALSE)
+
+concerns.df <-  read.csv("data/DerivedData/ProjectDataConcerns_MainFile.csv", stringsAsFactors = FALSE)
+
+changes.df <-  read.csv("data/DerivedData/ProjectOperationalChanges_MainFile.csv", stringsAsFactors = FALSE)
+
 summary.df <-  read.csv("data/DerivedData/ProjectData_Summary.csv", stringsAsFactors = FALSE) %>%
                   arrange(ProjSeq)
 
@@ -30,7 +35,7 @@ This is a very basic illustration of the kind of automated reports you can gener
 
 This document was generated following the steps from this [worked example](https://rmarkdown.rstudio.com/articles_docx.html). For an in-depth description of many possibilities for markdown reports (pdf, html, word, powerpoint), start with [this guide](https://epirhandbook.com/en/reports-with-r-markdown.html). For a properly formatted technical report, consider the versatile [bookdown package](https://bookdown.org/yihui/rmarkdown/) or the  [csasdown extension ](https://github.com/pbs-assess/csasdown) specifically for DFO technical reports and research documents.
 
-*Important*: It is easy to get lost in the beautiful intricacies of generating perfectly-formatted reports using these more powerful tools for generating reports from markdown. However, the real bottleneck is getting a streamlined workflow up and running, from the individual data contributors to a basic summary of available information. Until that step works smoothly, a very basic report like this example should be sufficient. *Don't procrastinate on the hard part by spending your time on the flashy stuff!*
+*Important*: It is easy to get lost in the beautiful intricacies of generating perfectly-formatted reports using these more powerful tools for generating reports from markdown. However, the real bottleneck is getting a streamlined workflow up and running, from the individual data contributors to a basic summary of available information. Until that step works smoothly, a very basic report like this example should be sufficient. All the packages you need are already part of your RStudio install, so no additional setup is required.  *Don't procrastinate on the hard part by spending your time on the flashy stuff!*
 
 
 ## Example of Automated Summary Text
@@ -72,7 +77,68 @@ kable(table.df)
 
 ```
 
-## Example of A Project Detail Section
+## Example of Appendix Section With Project Details - Pilot Station Sonar
+
+
+
+![](PLOTS/IndividualDashboards/TimeSeries_PilotStation.png)
+
+**Figure A.1:** Time series of abundance estimates - Pilot Station Sonar. 
+
+
+
+**Table A.1:** Annual estimates - Pilot Station Sonar
+
+``` {r message=FALSE,echo=FALSE}
+
+
+
+table.df <- main.data.df  %>% dplyr::filter(Project == "PilotStation") %>%
+              select(Year,Estimate,SE,CV,Lower,Upper)
+
+
+kable(table.df)
+
+
+```
+
+
+
+
+**Table A.2:** Inventory of Operational Changes - Pilot Station Sonar
+
+``` {r message=FALSE,echo=FALSE}
+
+
+
+table.df <- changes.df  %>% dplyr::filter(Project == "PilotStation") %>%
+              select(Years,Component,Change_Event)
+
+
+kable(table.df)
+
+
+```
+
+
+
+
+
+
+**Table A.3:** Inventory of Data Concerns - Pilot Station Sonar
+
+``` {r message=FALSE,echo=FALSE}
+
+
+
+table.df <- concerns.df  %>% dplyr::filter(Project == "PilotStation") %>%
+              select(Years_Affected,	Potential_Issue)
+
+
+kable(table.df)
+
+
+```
 
 
 
