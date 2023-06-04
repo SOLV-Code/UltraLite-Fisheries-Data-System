@@ -36,7 +36,7 @@ If familiar with RStudio and git, just clone this repository
 
 Text
 
-"bite-size csv files"  shareable, little memory, no version/OS issues  -> these individual files are convenient for *people* in a process, and then use R code to generate a file that's convenient for the *computer* to manage and summarize the data. 
+"bite-size csv files"  shareable, little memory, no version/OS issues  -> these individual files are convenient for *people* in a process, and then use R code to generate a file that's convenient for the *computer* to manage and summarize the data.   "people-friendly" , software issues, learning curve, context. not dealing with large data sets, just diverse sources.  email firewalls, low bandwith in field. Parts maintained by different people -> single file quickly becomes difficult to manage.
 
 code to merge/check/organize
 
@@ -46,7 +46,7 @@ Basic components of  a relational data base like MS Access (individual tables, l
 
 Advantages over the still-common "data management by spreadsheet" approach. _> add more years of data, or add more projects, or change the layout for diagnostic plots -> all of these are major headaches that can be automated.
 
-clear process around changes: -> commit messages, branches -> example
+clear process around changes: -> commit messages, branches -> example  -> van see whole history of a changes for a specific file.
 
 
 MERGE CODE
