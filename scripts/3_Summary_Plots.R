@@ -51,7 +51,7 @@ summary.df
 
 
 png(filename = "PLOTS/DataOverview_ALL.png",
-    width = 480*4, height = 480*5, units = "px", pointsize = 14*3.3, bg = "white",  res = NA)
+    width = 480*4, height = 480*4.5, units = "px", pointsize = 14*3.3, bg = "white",  res = NA)
 
 par(mai=c(3,6.5,4,2))
 

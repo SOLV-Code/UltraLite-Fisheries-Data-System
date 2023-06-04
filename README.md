@@ -42,7 +42,7 @@ code to merge/check/organize
 
 - tracking changes with git / github (
 
-Basic components of  a relational data base like MS Access (individual tables, linked through queries, except that the tables are individual csv files and the queries are R scripts. However, contributors   
+Basic components of  a relational data base like MS Access (individual tables, linked through queries, except that the tables are individual csv files and the queries are R scripts. However, contributors   can use components more easily. Also: with markdown can set up automated reports/presentations with much more formatting control than in Access. For analysts already using R, this approach has one additiona; benefit: it keeps the full sequence of work, from source data to final report, in the same programming language (no need to switch between R and VisualBasic and Access queries)
 
 Advantages over the still-common "data management by spreadsheet" approach. _> add more years of data, or add more projects, or change the layout for diagnostic plots -> all of these are major headaches that can be automated.
 
@@ -54,6 +54,12 @@ summary code
 
 simple example of automated report (to word doc)
 
+[basic word report](https://rmarkdown.rstudio.com/articles_docx.html)
+
+[in-depth description of markdown reports (pdf, html, word, powerpoint](https://epirhandbook.com/en/reports-with-r-markdown.html)
+
+
+For a properly formatted technical report, consider the very versatile [bookdown package](https://bookdown.org/yihui/rmarkdown/) or the  [csasdown extension ](https://github.com/pbs-assess/csasdown)specifically for DFO technical reports and research documents.
 
 ## Structure
 
