@@ -25,11 +25,37 @@ on *New Issue*.
 
 ## Get Started
 
-If you just want to have a look: keep reading and follow the links below for specific examples of file structure and code
+You have three options for browsing through this repository:
 
-If you just want a local copy of the key files: download zip
+* If you just want to have a quick look, keep reading and follow the links below for specific examples of file structure and code.
 
-If familiar with RStudio and git, just clone this repository
+* If you want a local copy of the key files, click on the green *<> Code* button neaer the top of this page, and select "Download Zip".
+
+* If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *UltraLite-Fisheries-Data-System.Rproj*
+
+There are lots of tutorials to help you get started with R/RStudio and Git/Github (e.g., [here](https://www.dataquest.io/blog/tutorial-getting-started-with-r-and-rstudio/),
+[here](https://sites.northwestern.edu/researchcomputing/resources/using-git-and-github-with-r-rstudio/),[here](https://happygitwithr.com/rstudio-git-github.html), and [here](https://resources.github.com/github-and-rstudio/))
+
+
+## Structure
+
+Each folder has a *README.md* file that explains the files. Github displays the README contents below the list of files. If there are a lot of files, you may have to scroll to the bottom to see the README.
+
+
+
+The key folders are:
+
+* [*functions*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/functions): a folder with R functions that automate key steps (e.g., standard diagnostic plots)
+* [*scripts*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/scripts):
+* [*data*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data):
+
+
+
+
+
+
+
+
 
 ## Key Features
 
@@ -52,7 +78,9 @@ clear process around changes: -> commit messages, branches -> example  -> van se
 MERGE CODE
 summary code
 
-simple example of automated report (to word doc)
+[simple example of automated report in Word](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)
+
+
 
 [basic word report](https://rmarkdown.rstudio.com/articles_docx.html)
 
@@ -61,18 +89,6 @@ simple example of automated report (to word doc)
 
 For a properly formatted technical report, consider the very versatile [bookdown package](https://bookdown.org/yihui/rmarkdown/) or the  [csasdown extension ](https://github.com/pbs-assess/csasdown)specifically for DFO technical reports and research documents.
 
-## Structure
-
-
-
-
-## Operational Details
-
-
-
-
-
-- RStudio project
 
 
 
