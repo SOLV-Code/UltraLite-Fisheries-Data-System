@@ -29,57 +29,55 @@ You have three options for browsing through this repository:
 
 * If you just want to have a quick look, keep reading and follow the links below for specific examples of file structure and code.
 
-* If you want a local copy of the key files, click on the green *<> Code* button neaer the top of this page, and select "Download Zip".
+* If you want a local copy of the key files, click on the green *"<> Code"* button neaer the top of this page, and select *"Download Zip"*.
 
 * If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *UltraLite-Fisheries-Data-System.Rproj*
 
-There are lots of tutorials to help you get started with R/RStudio and Git/Github (e.g., [here](https://www.dataquest.io/blog/tutorial-getting-started-with-r-and-rstudio/),
-[here](https://sites.northwestern.edu/researchcomputing/resources/using-git-and-github-with-r-rstudio/),[here](https://happygitwithr.com/rstudio-git-github.html), and [here](https://resources.github.com/github-and-rstudio/))
+There are lots of tutorials to help you get started with R/RStudio and Git/Github (e.g., [here](https://www.dataquest.io/blog/tutorial-getting-started-with-r-and-rstudio/), 
+[here](https://sites.northwestern.edu/researchcomputing/resources/using-git-and-github-with-r-rstudio/),   [here](https://happygitwithr.com/rstudio-git-github.html), and [here](https://resources.github.com/github-and-rstudio/))
 
 
 ## Structure
 
 Each folder has a *README.md* file that explains the files. Github displays the README contents below the list of files. If there are a lot of files, you may have to scroll to the bottom to see the README.
 
-
-
 The key folders are:
 
+* [*data*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data): Source data, derived data, and tracking files. Details below.
 * [*functions*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/functions): a folder with R functions that automate key steps (e.g., standard diagnostic plots)
-* [*scripts*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/scripts):
-* [*data*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data):
-
-
-
-
-
-
+* [*scripts*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/scripts): R code that needs to be run in sequence to first process the raw data, then generate summaries.
 
 
 
 ## Key Features
 
 
-Text
+### File Formats
 
 "bite-size csv files"  shareable, little memory, no version/OS issues  -> these individual files are convenient for *people* in a process, and then use R code to generate a file that's convenient for the *computer* to manage and summarize the data.   "people-friendly" , software issues, learning curve, context. not dealing with large data sets, just diverse sources.  email firewalls, low bandwith in field. Parts maintained by different people -> single file quickly becomes difficult to manage.
 
+
+### R Code
+
 code to merge/check/organize
-
-- tracking changes with git / github (
-
-Basic components of  a relational data base like MS Access (individual tables, linked through queries, except that the tables are individual csv files and the queries are R scripts. However, contributors   can use components more easily. Also: with markdown can set up automated reports/presentations with much more formatting control than in Access. For analysts already using R, this approach has one additiona; benefit: it keeps the full sequence of work, from source data to final report, in the same programming language (no need to switch between R and VisualBasic and Access queries)
-
-Advantages over the still-common "data management by spreadsheet" approach. _> add more years of data, or add more projects, or change the layout for diagnostic plots -> all of these are major headaches that can be automated.
-
-clear process around changes: -> commit messages, branches -> example  -> van see whole history of a changes for a specific file.
-
 
 MERGE CODE
 summary code
 
-[simple example of automated report in Word](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)
+### Tracking Changes
 
+
+- tracking changes with git / github (
+
+clear process around changes: -> commit messages, branches -> example  -> van see whole history of a changes for a specific file.
+
+
+SHOW EXAMPLE
+
+### Automated Reports
+
+
+[simple example of automated report in Word](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)
 
 
 [basic word report](https://rmarkdown.rstudio.com/articles_docx.html)
@@ -88,6 +86,18 @@ summary code
 
 
 For a properly formatted technical report, consider the very versatile [bookdown package](https://bookdown.org/yihui/rmarkdown/) or the  [csasdown extension ](https://github.com/pbs-assess/csasdown)specifically for DFO technical reports and research documents.
+
+
+## Pro/Con
+
+
+Basic components of  a relational data base like MS Access (individual tables, linked through queries, except that the tables are individual csv files and the queries are R scripts. However, contributors   can use components more easily. Also: with markdown can set up automated reports/presentations with much more formatting control than in Access. For analysts already using R, this approach has one additiona; benefit: it keeps the full sequence of work, from source data to final report, in the same programming language (no need to switch between R and VisualBasic and Access queries)
+
+But: does not enforce record integrity the same way a a properly designed database with input templates. 
+
+Advantages over the still-common "data management by spreadsheet" approach. _> add more years of data, or add more projects, or change the layout for diagnostic plots -> all of these are major headaches that can be automated.
+
+
 
 
 
