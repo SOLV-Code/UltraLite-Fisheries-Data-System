@@ -54,10 +54,28 @@ The main folder also has the source, formatting template, and output for an illu
 
 ### Format of Source Files
 
-"bite-size csv files"  shareable, little memory, no version/OS issues  -> these individual files are convenient for *people* in a process, and then use R code to generate a file that's convenient for the *computer* to manage and summarize the data.   "people-friendly" , software issues, learning curve, context. not dealing with large data sets, just diverse sources.  email firewalls, low bandwith in field. Parts maintained by different people -> single file quickly becomes difficult to manage.
+All the source data are packaged as"bite-size" csv files for each project in the [*data/Profiles folder*](
+https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles). This *de-centralized* and *people-friendly* structure avoids many of the practical hurdles encountered when parts of the source data are maintained by many different people across multiple fisheries organizations 
 
+csv files are plain text files with comma-separated values, which are widely used for [moving tabular data between programs](https://en.wikipedia.org/wiki/Comma-separated_values#Data_exchange). They are easily shareable among contributors, require very little memory, can be opened with most analytical software and text editors, and don't run into issues with software versions, operating systems, firewall blocks of e-mail attachments. Small csv files also don't cause problems when contributors are in the field and have low bandwidth on their internet connection.
 
-header comments in source files
+Keeping the data in individual files is convenient for *people* in the data compilation and review process, because not every contributor needs the full set of data during each exchange and update. Each data set is typically small in terms of modern data management, with most time series covering less than 60 annual estimates. If all the data sets were maintained in a single file, it would quickly become difficult to track and manage updates. For example, imagine sending the full data set covering 31 Yukon Chinook data sets to all 33 contributors, then some of them then send it back with revisions, and you have to cross-check/merge all the revisions. In a full database application, the solution would be to set up a data entry portal with data templates, requiring substantial software development and raising substantial practical hurdles (software requirements, learning curve). In this ultralite approach, all you need to do is replace the individual project csv files in the [*data/Profiles folder*](
+https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles)with the updated versions, and let Git/Github handle the tracking of changes (see details [here](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System#tracking-changes)).
+
+Then a short R script merges the individual source files into a *computer-friendly* version of the full data set as the very last step.
+
+### Structure of Source Files
+
+The project inventory in [data/Profiles/ProjectInfo_Lookup.csv](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/ProjectInfo_Lookup.csv)  matches individual assessment projects to stocks, watersheds, plot labels, etc.
+
+For each project, there are up to 3 csv files: 
+
+* *ProjectLabel_Data*(required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```.
+* *ProjectLabel_DataConcerns*(optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*).
+* *ProjectLabel_OperationalChanges*(optional): lists any major modifications to the survey program, in 3 columns (*Years*, *Component*, *Change_Event*).
+
+Compiling short notes on data concerns and operational changes in *csv* format makes it possible to generate compact summary tables inan automated report (see examples at the end of [Report_Source.docx](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)).  
+
 
 ### R Code
 
@@ -79,15 +97,13 @@ SHOW EXAMPLE
 ### Automated Reports
 
 
-[simple example of automated report in Word](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)
+An example of an automated report in Word is included: [Report_Source.docx](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)
 
+This is a very basic illustration of the kind of automated reports you can generate with R markdown. In this set-up, you have limited options for formatting (e.g., page breaks or figure captions require workarounds), but it shows the key benefit: every time you source data is updated you can quickly generate an updated report with all the  updated figures and tables. 
 
-[basic word report](https://rmarkdown.rstudio.com/articles_docx.html)
+This document was generated following the steps from this [worked example](https://rmarkdown.rstudio.com/articles_docx.html). For an in-depth description of many possibilities for markdown reports (pdf, html, word, powerpoint), start with [this guide](https://epirhandbook.com/en/reports-with-r-markdown.html). For a properly formatted technical report, consider the versatile [bookdown package](https://bookdown.org/yihui/rmarkdown/) or the  [csasdown extension ](https://github.com/pbs-assess/csasdown) specifically for DFO technical reports and research documents.
 
-[in-depth description of markdown reports (pdf, html, word, powerpoint](https://epirhandbook.com/en/reports-with-r-markdown.html)
-
-
-For a properly formatted technical report, consider the very versatile [bookdown package](https://bookdown.org/yihui/rmarkdown/) or the  [csasdown extension ](https://github.com/pbs-assess/csasdown)specifically for DFO technical reports and research documents.
+*Important*: It is easy to get lost in the beautiful intricacies of generating perfectly-formatted reports using these more powerful tools for generating reports from markdown. However, the real bottleneck is getting a streamlined workflow up and running, from the individual data contributors to a basic summary of available information. Until that step works smoothly, a very basic report like this example should be sufficient. All the packages you need are already part of your RStudio install, so no additional setup is required.  *Don't procrastinate on the hard part by spending your time on the flashy stuff!*
 
 
 ## Pro/Con
