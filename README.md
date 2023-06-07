@@ -33,9 +33,6 @@ You have three options for browsing through this repository:
 
 * If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *UltraLite-Fisheries-Data-System.Rproj*
 
-There are lots of tutorials to help you get started with R/RStudio and Git/Github (e.g., [here](https://www.dataquest.io/blog/tutorial-getting-started-with-r-and-rstudio/), 
-[here](https://sites.northwestern.edu/researchcomputing/resources/using-git-and-github-with-r-rstudio/),   [here](https://happygitwithr.com/rstudio-git-github.html), and [here](https://resources.github.com/github-and-rstudio/))
-
 
 ## Structure
 
@@ -99,22 +96,26 @@ Once you've set up and tested everything, subsequent updates require only 3 step
 
 ### Tracking Changes
 
+Git and Github are powerful tools for tracking changes in your data and code. But with this power comes a bit of a learning curve.  There are lots of tutorials to help you get started with R/RStudio and Git/Github (e.g., [here](https://www.dataquest.io/blog/tutorial-getting-started-with-r-and-rstudio/), 
+[here](https://sites.northwestern.edu/researchcomputing/resources/using-git-and-github-with-r-rstudio/),   [here](https://happygitwithr.com/rstudio-git-github.html), and [here](https://resources.github.com/github-and-rstudio/))
 
-- tracking changes with git / github (
+There are a few important things to remember:
 
-clear process around changes: -> commit messages, branches -> example  -> can see whole history of a changes for a specific file.
+* git is designed for tracking changes in text, such as code or plain-text data files. In those cases, it keeps a very efficient inventory of changes. However, if you have files like xlsx, pdf, docx, or png in your repository, it will keep a full copy of every single version, leading to potential memory problems in the long run.
+You can exclude individual files, file types, or whole subfolders from tracking in the [.gitignore file](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/.gitignore). For details om *.gitignore*, you can start [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
+* The full power of these change tracking tools can only be realized when there is clear process around changes followed by maintainers for each major change. This includes:
 
+* issues inventory
+* frequent commits (e.g., after each file update for an individual project, after every chunk of code)
+* detailed commit messages
 
-SHOW EXAMPLE
+For an example, check out the following:
 
-file changes
-
-issue link in commit
-
-file history
-
-issue search
-
+* [this issue](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/issues/11) identifying an problem with one of the data sets and the subsequent comments
+* [this summary of the changes](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/commit/96b41001f9502183c00b162859ff713067ace85c) which shows the commit message, and before/after for each changed file. (The BorderMR data changes are near the bottom). You can get to this summary in several different ways: 
+   * if you know when the change was made, go to *Insights> Network* then click on the relevant node.
+   * if you remember a key word, go to *Issues*, then clear the search bar (remove is:issue and is:open), enter the key word in the search bar (e.g., BorderMR), and all relevant issues and commits will be listed.
+   * if you know the specific file, you can go to that file in github,  then click on the *History* button on the top right. It will then display a complete [history of previous versions](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/commits/main/data/Profiles/YkCk_BorderMR_Data.csv). You can then click on a specific version to see the specific changes compared to the previous version.
 
 
 ### Automated Reports
