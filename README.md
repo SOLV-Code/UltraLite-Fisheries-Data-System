@@ -47,15 +47,17 @@ The key folders are:
 * [*functions*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/functions): a folder with R functions that automate key steps (e.g., standard diagnostic plots)
 * [*scripts*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/scripts): R code that needs to be run in sequence to first process the raw data, then generate summaries.
 
-
+The main folder also has the source, formatting template, and output for an illustration of automated reports using markdown (*Sample_Report_Source.Rmd*,*word-styles-reference-01.docx*,*Sample_Report_Source.docx*).
 
 ## Key Features
 
 
-### File Formats
+### Format of Source Files
 
 "bite-size csv files"  shareable, little memory, no version/OS issues  -> these individual files are convenient for *people* in a process, and then use R code to generate a file that's convenient for the *computer* to manage and summarize the data.   "people-friendly" , software issues, learning curve, context. not dealing with large data sets, just diverse sources.  email firewalls, low bandwith in field. Parts maintained by different people -> single file quickly becomes difficult to manage.
 
+
+header comments in source files
 
 ### R Code
 
