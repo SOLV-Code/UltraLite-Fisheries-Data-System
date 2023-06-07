@@ -104,14 +104,13 @@ There are a few important things to remember:
 * git is designed for tracking changes in text, such as code or plain-text data files. In those cases, it keeps a very efficient inventory of changes. However, if you have files like xlsx, pdf, docx, or png in your repository, it will keep a full copy of every single version, leading to potential memory problems in the long run.
 You can exclude individual files, file types, or whole subfolders from tracking in the [.gitignore file](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/.gitignore). For details om *.gitignore*, you can start [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
 * The full power of these change tracking tools can only be realized when there is clear process around changes followed by maintainers for each major change. This includes:
-
-* issues inventory
-* frequent commits (e.g., after each file update for an individual project, after every chunk of code)
-* detailed commit messages
+   * issues inventory
+   * frequent commits (e.g., after each file update for an individual project, after every chunk of code)
+   * detailed commit messages
 
 For an example, check out the following:
 
-* [this issue](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/issues/11) identifying an problem with one of the data sets and the subsequent comments
+* [this issue](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/issues/11) identifying a problem with one of the data sets and the subsequent comments
 * [this summary of the changes](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/commit/96b41001f9502183c00b162859ff713067ace85c) which shows the commit message, and before/after for each changed file. (The BorderMR data changes are near the bottom). You can get to this summary in several different ways: 
    * if you know when the change was made, go to *Insights> Network* then click on the relevant node.
    * if you remember a key word, go to *Issues*, then clear the search bar (remove is:issue and is:open), enter the key word in the search bar (e.g., BorderMR), and all relevant issues and commits will be listed.
