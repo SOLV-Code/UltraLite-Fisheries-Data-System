@@ -52,17 +52,19 @@ The main folder also has the source, formatting template, and output for an illu
 ## Key Features
 
 
-### Format of Source Files
+### File Format
 
 All the source data are packaged as"bite-size" csv files for each project in the [*data/Profiles folder*](
-https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles). This *de-centralized* and *people-friendly* structure avoids many of the practical hurdles encountered when parts of the source data are maintained by many different people across multiple fisheries organizations 
+https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles). This **de-centralized and people-friendly** structure avoids many of the practical hurdles encountered when parts of the source data are maintained by many different people across multiple fisheries organizations 
 
 csv files are plain text files with comma-separated values, which are widely used for [moving tabular data between programs](https://en.wikipedia.org/wiki/Comma-separated_values#Data_exchange). They are easily shareable among contributors, require very little memory, can be opened with most analytical software and text editors, and don't run into issues with software versions, operating systems, firewall blocks of e-mail attachments. Small csv files also don't cause problems when contributors are in the field and have low bandwidth on their internet connection.
 
-Keeping the data in individual files is convenient for *people* in the data compilation and review process, because not every contributor needs the full set of data during each exchange and update. Each data set is typically small in terms of modern data management, with most time series covering less than 60 annual estimates. If all the data sets were maintained in a single file, it would quickly become difficult to track and manage updates. For example, imagine sending the full data set covering 31 Yukon Chinook data sets to all 33 contributors, then some of them then send it back with revisions, and you have to cross-check/merge all the revisions. In a full database application, the solution would be to set up a data entry portal with data templates, requiring substantial software development and raising substantial practical hurdles (software requirements, learning curve). In this ultralite approach, all you need to do is replace the individual project csv files in the [*data/Profiles folder*](
-https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles)with the updated versions, and let Git/Github handle the tracking of changes (see details [here](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System#tracking-changes)).
+Keeping the data in individual files is convenient for *people* in the data compilation and review process, because not every contributor needs the full set of data during each exchange and update. Each data set is typically small in terms of modern data management, with most time series covering less than 60 annual estimates. If all the data sets were maintained in a single file, it would quickly become difficult to track and manage updates. 
 
-Then a short R script merges the individual source files into a *computer-friendly* version of the full data set as the very last step.
+For example, imagine sending the full data set covering 31 Yukon Chinook data sets to all 33 contributors, then some of them then send it back with revisions, and you have to cross-check/merge all the revisions. In a full database application, the solution would be to set up a data entry portal with data templates, requiring substantial software development and raising substantial practical hurdles (software requirements, learning curve). In this ultralite approach, all you need to do is replace the individual project csv files in the [*data/Profiles folder*](
+https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles) with the updated versions, and let Git/Github handle the tracking of changes (see details [here](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System#tracking-changes)).
+
+Then a short R script merges the individual source files into a **computer-friendly** version of the full data set as the very last step.
 
 ### Structure of Source Files
 
@@ -70,19 +72,29 @@ The project inventory in [data/Profiles/ProjectInfo_Lookup.csv](https://github.c
 
 For each project, there are up to 3 csv files: 
 
-* *ProjectLabel_Data*(required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```.
-* *ProjectLabel_DataConcerns*(optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*).
-* *ProjectLabel_OperationalChanges*(optional): lists any major modifications to the survey program, in 3 columns (*Years*, *Component*, *Change_Event*).
+* *ProjectLabel_Data*(required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```. See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_BorderMR_Data.csv).
+* *ProjectLabel_DataConcerns*(optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*). See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_AndreafskyWeir_DataConcerns.csv).
+* *ProjectLabel_OperationalChanges*(optional): lists any major modifications to the survey program, in 3 columns (*Years*, *Component*, *Change_Event*). See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_AndreafskyWeir_OperationalChanges.csv).
 
 Compiling short notes on data concerns and operational changes in *csv* format makes it possible to generate compact summary tables inan automated report (see examples at the end of [Report_Source.docx](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)).  
 
 
 ### R Code
 
-code to merge/check/organize
+Given this file structure, the R code to merge, cross-check, and summarize the data across projects is relatively simple.
 
-MERGE CODE
-summary code
+[scripts/1_DataPrep.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/1_DataPrep.R) generates a list of project files in the [*data/Profiles folder*](
+https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles), then loops through all the files to generate a merged main data file as well as reorganized data sets (e.g., ["wide" file](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/DerivedData/ProjectData_EstOnly_Wide.csv) with the values for each project in a column, which is a convenient source for some plotting functions). Also generates a [project summary](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/DerivedData/ProjectData_Summary.csv) which tabulates the available data for each project.
+
+
+[scripts/2_TimeSeries_Plots.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/2_TimeSeries_Plots.R) and [scripts/3_Summary_Plots.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/3_Summary_Plots.R) 
+generate various [plots](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/PLOTS).
+
+[scripts/0_RunAll.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/0_RunAll.R) runs all the other scripts. Once you've set up and tested everything, subsequent updates require only 3 steps:
+
+* Replace the project profile csv files with the latest version
+* Open RStudio, open [scripts/0_RunAll.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/0_RunAll.R), press Ctrl-a to highlight the whole script, and click "Run". This runs the merge, summary, and plotting steps.
+* Open [Sample_Report_Source.Rmd](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/Sample_Report_Source.Rmd) and click "Knit". The data report with all the updated figures and tables will be generated.
 
 ### Tracking Changes
 
