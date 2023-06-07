@@ -129,14 +129,18 @@ This document was generated following the steps from this [worked example](https
 *Important*: It is easy to get lost in the beautiful intricacies of generating perfectly-formatted reports using these more powerful tools for generating reports from markdown. However, the real bottleneck is getting a streamlined workflow up and running, from the individual data contributors to a basic summary of available information. Until that step works smoothly, a very basic report like this example should be sufficient. All the packages you need are already part of your RStudio install, so no additional setup is required.  *Don't procrastinate on the hard part by spending your time on the flashy stuff!*
 
 
-## Pro/Con
+## Discussion
 
+This ultralite approach has clear advantages over the still-common "data management by spreadsheet" approach. In fisheries analysis we often encounter xls workbooks used to compile data and implement some basic data processing and calculations. These have typically grown over years or even decades, have dozens of interconnected tabs, and include important information in text boxes and pop-up comments. These are large files, making them cumbersome for e-mailing around, it is difficult to coordinate changes for multiple contributors, and it can be a massive task to add additional years of data or additional time series. If they contain a large number of diagnostic plots (e.g., a time series plot for each assessment project), then any simple formatting change will have to be replicated for every single plot (e.g., axis label revision).
 
-Basic components of  a relational data base like MS Access (individual tables, linked through queries, except that the tables are individual csv files and the queries are R scripts. However, contributors   can use components more easily. Also: with markdown can set up automated reports/presentations with much more formatting control than in Access. For analysts already using R, this approach has one additiona; benefit: it keeps the full sequence of work, from source data to final report, in the same programming language (no need to switch between R and VisualBasic and Access queries)
+This ultralite approach replicates the basic components of relational data base like MS Access, which store data in individual tables that are linked through queries, except that the tables here are individual csv files and the queries are R scripts. While the components are analogous,  contributors can review and update them more easily if they  are in individual plain text files.  
 
-But: does not enforce record integrity the same way a a properly designed database with input templates. 
+One drawback is that the individual csv files do not enforce record integrity the same way as a properly designed database with input templates. In practice, this can be remedied through a bit of coordination among contributors.
 
-Advantages over the still-common "data management by spreadsheet" approach. _> add more years of data, or add more projects, or change the layout for diagnostic plots -> all of these are major headaches that can be automated.
+With RStudio and markdown we can set up automated reports or presentations with much more formatting control than in Access. 
+
+For analysts already using R, this ultralite approach has one additional benefit: it keeps the full sequence of work, from source data to final report, in the same programming language (no need to learn or try to remember Excel formulae, VisualBasic code , or Access queries).
+
 
 
 
