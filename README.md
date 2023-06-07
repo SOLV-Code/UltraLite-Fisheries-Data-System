@@ -83,14 +83,15 @@ Compiling short notes on data concerns and operational changes in *csv* format m
 
 Given this file structure, the R code to merge, cross-check, and summarize the data across projects is relatively simple.
 
-[scripts/1_DataPrep.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/1_DataPrep.R) generates a list of project files in the [*data/Profiles folder*](
+* [scripts/1_DataPrep.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/1_DataPrep.R) generates a list of project files in the [*data/Profiles folder*](
 https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles), then loops through all the files to generate a merged main data file as well as reorganized data sets (e.g., ["wide" file](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/DerivedData/ProjectData_EstOnly_Wide.csv) with the values for each project in a column, which is a convenient source for some plotting functions). Also generates a [project summary](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/DerivedData/ProjectData_Summary.csv) which tabulates the available data for each project.
 
-
-[scripts/2_TimeSeries_Plots.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/2_TimeSeries_Plots.R) and [scripts/3_Summary_Plots.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/3_Summary_Plots.R) 
+* [scripts/2_TimeSeries_Plots.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/2_TimeSeries_Plots.R) and [scripts/3_Summary_Plots.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/3_Summary_Plots.R) 
 generate various [plots](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/PLOTS).
 
-[scripts/0_RunAll.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/0_RunAll.R) runs all the other scripts. Once you've set up and tested everything, subsequent updates require only 3 steps:
+* [scripts/0_RunAll.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/0_RunAll.R) runs all the other scripts. 
+
+Once you've set up and tested everything, subsequent updates require only 3 steps:
 
 * Replace the project profile csv files with the latest version
 * Open RStudio, open [scripts/0_RunAll.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/0_RunAll.R), press Ctrl-a to highlight the whole script, and click "Run". This runs the merge, summary, and plotting steps.
@@ -101,10 +102,20 @@ generate various [plots](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-S
 
 - tracking changes with git / github (
 
-clear process around changes: -> commit messages, branches -> example  -> van see whole history of a changes for a specific file.
+clear process around changes: -> commit messages, branches -> example  -> can see whole history of a changes for a specific file.
 
 
 SHOW EXAMPLE
+
+file changes
+
+issue link in commit
+
+file history
+
+issue search
+
+
 
 ### Automated Reports
 
