@@ -1,6 +1,6 @@
 # UltraLite-Fisheries-Data-System
 
-This is a worked example of a very robust data management approach for fisheries data. 
+This is a worked example of a very robust, [human-centered](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/wiki/Background:-Human-centered-design) data management approach for a common type of fisheries data. 
 
 ## Purpose
 
@@ -15,6 +15,10 @@ The approach was originally developed for compiling and maintaining data for Yuk
 
 
 **The example files in this repository are a subset of the published information in [Pestal et al. (2022)](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf). THIS IS NOT A COMPLETE OR UP-TO-DATE DATASET FOR YUKON CHINOOK!** These files are used to illustrate the real-life level of detail that was compiled to document the context for each time series.
+
+
+
+
 
 ## Feedback
 
@@ -52,7 +56,7 @@ The main folder also has the source, formatting template, and output for an illu
 ### File Format
 
 All the source data are packaged as"bite-size" csv files for each project in the [*data/Profiles folder*](
-https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles). This **de-centralized and people-friendly** structure avoids many of the practical hurdles encountered when parts of the source data are maintained by many different people across multiple fisheries organizations 
+https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles). This **de-centralized and people-friendly** structure avoids many of the practical hurdles encountered when parts of the source data are maintained by many different people across multiple fisheries organizations.
 
 csv files are plain text files with comma-separated values, which are widely used for [moving tabular data between programs](https://en.wikipedia.org/wiki/Comma-separated_values#Data_exchange). They are easily shareable among contributors, require very little memory, can be opened with most analytical software and text editors, and don't run into issues with software versions, operating systems, firewall blocks of e-mail attachments. Small csv files also don't cause problems when contributors are in the field and have low bandwidth on their internet connection.
 
@@ -122,7 +126,7 @@ For an example, check out the following:
 
 An example of an automated report in Word is included: [Report_Source.docx](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)
 
-This is a very basic illustration of the kind of automated reports you can generate with R markdown. In this set-up, you have limited options for formatting (e.g., page breaks or figure captions require workarounds), but it shows the key benefit: every time you source data is updated you can quickly generate an updated report with all the  updated figures and tables. 
+This is a very basic illustration of the kind of automated reports you can generate with R markdown. In this set-up, you have limited options for formatting (e.g., page breaks or figure captions require workarounds), but it shows the key benefit: every time your source data is updated you can quickly generate an updated report with all the updated figures and tables. 
 
 This document was generated following the steps from this [worked example](https://rmarkdown.rstudio.com/articles_docx.html). For an in-depth description of many possibilities for markdown reports (pdf, html, word, powerpoint), start with [this guide](https://epirhandbook.com/en/reports-with-r-markdown.html). For a properly formatted technical report, consider the versatile [bookdown package](https://bookdown.org/yihui/rmarkdown/) or the  [csasdown extension ](https://github.com/pbs-assess/csasdown) specifically for DFO technical reports and research documents.
 
