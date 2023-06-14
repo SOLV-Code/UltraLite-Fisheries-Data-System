@@ -6,9 +6,9 @@ This is a worked example of a very robust, [human-centered](https://github.com/S
 
 The approach is robust in terms of actual implementation for a very specific type of setting, specifically situations where a small number of people try to maintain an up-to-date data set of annual estimates for a group of stocks, with source data coming from many different assessment programs and agencies. The annual estimates typically have important context and annual caveats for interpretation, spread out over many different reports, spreadsheet notes, and e-mail exchanges, which needs to be compiled in some format that is easily accessible. 
 
-The approach was originally developed for compiling and maintaining data for Yukon River Chinook salmon, which combines outputs from 31 main assessment surveys covering a basin of 850,000 km<sup>2</sup> ([Pestal et al. 2022](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf)). 33 people from 11 organizations contributed to the data compilation and review process. Data summaries and model input files had to be constantly updated as data review and model development progressed.
+The approach was originally developed for compiling and maintaining data for Yukon River Chinook salmon, which combines outputs from 31 main assessment surveys covering a basin of 850,000 km<sup>2</sup> ([Pestal et al. 2022](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf)). 33 people from 11 organizations contributed to the data compilation and review process. Data summaries and model input files had to be constantly updated as data review and model development progressed concurrently.
 
-*Important: This approach is not designed to track large amounts of raw data (e.g., individual records from genetic sampling or hydroacoustic tagging programs), but to facilitate and track the synthesis of these pieces into an overall picture of available information* 
+*Important: This approach is not designed to track large amounts of raw data (e.g., individual records from genetic sampling or hydroacoustic tagging programs), but to facilitate and track the synthesis of these pieces into an overall picture of available information.* 
 
 
 *Important: This repository is just an illustration of the basic building blocks: data format, folder structure, and data processing code. The full implementation for Yukon Chinook includes extensive diagnostic plots and an automated summary report created with [csasdown](https://github.com/pbs-assess/csasdown). In the case of Yukon Chinook, the run reconstruction step was done by a separate model in a separate repository, but the data processing and run reconstruction steps could be integrated within a single repository.*
@@ -48,7 +48,7 @@ The key folders are:
 * [*functions*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/functions): a folder with R functions that automate key steps (e.g., standard diagnostic plots)
 * [*scripts*](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/scripts): R code that needs to be run in sequence to first process the raw data, then generate summaries.
 
-The main folder also has the source, formatting template, and output for an illustration of automated reports using markdown (*Sample_Report_Source.Rmd*,*word-styles-reference-01.docx*,*Sample_Report_Source.docx*).
+The main folder also has the source, formatting template, and output for an illustration of automated reports using markdown (*Sample_Report_Source.Rmd*, *word-styles-reference-01.docx*, *Sample_Report_Source.docx*).
 
 ## Key Features
 
@@ -58,9 +58,9 @@ The main folder also has the source, formatting template, and output for an illu
 All the source data are packaged as"bite-size" csv files for each project in the [*data/Profiles folder*](
 https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles). This **de-centralized and people-friendly** structure avoids many of the practical hurdles encountered when parts of the source data are maintained by many different people across multiple fisheries organizations.
 
-csv files are plain text files with comma-separated values, which are widely used for [moving tabular data between programs](https://en.wikipedia.org/wiki/Comma-separated_values#Data_exchange). They are easily shareable among contributors, require very little memory, can be opened with most analytical software and text editors, and don't run into issues with software versions, operating systems, firewall blocks of e-mail attachments. Small csv files also don't cause problems when contributors are in the field and have low bandwidth on their internet connection.
+csv files are plain text files with comma-separated values, which are widely used for [moving tabular data between programs](https://en.wikipedia.org/wiki/Comma-separated_values#Data_exchange). They are easily shareable among contributors, require very little memory, can be opened with most analytical software and text editors, and don't run into issues with software versions, operating systems, or firewall blocks of e-mail attachments. Small csv files also don't cause problems when contributors are in the field and have low bandwidth on their internet connection.
 
-Keeping the data in individual files is convenient for *people* in the data compilation and review process, because not every contributor needs the full set of data during each exchange and update. Each data set is typically small in terms of modern data management, with most time series covering less than 60 annual estimates. If all the data sets were maintained in a single file, it would quickly become difficult to track and manage updates. 
+Keeping the data in individual files is convenient for *people* in the data compilation and review process, because not every contributor needs the full set of data during each exchange and update. Each data set is typically small in terms of modern data management, with most time series covering less than 60 annual estimates. If all the data sets were maintained in a single file, it would quickly become difficult to track and manage concurrent updates from multiple projects. 
 
 For example, imagine sending the full data set covering 31 Yukon Chinook data sets to all 33 contributors, then some of them then send it back with revisions, and you have to cross-check/merge all the revisions. In a full database application, the solution would be to set up a data entry portal with data templates, requiring substantial software development and raising substantial practical hurdles (software requirements, learning curve). In this ultralite approach, all you need to do is replace the individual project csv files in the [*data/Profiles folder*](
 https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/tree/main/data/Profiles) with the updated versions, and let Git/Github handle the tracking of changes (see details [here](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System#tracking-changes)).
@@ -73,11 +73,11 @@ The project inventory in [data/Profiles/ProjectInfo_Lookup.csv](https://github.c
 
 For each project, there are up to 3 csv files: 
 
-* *ProjectLabel_Data*(required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```. See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_BorderMR_Data.csv).
-* *ProjectLabel_DataConcerns*(optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*). See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_AndreafskyWeir_DataConcerns.csv).
-* *ProjectLabel_OperationalChanges*(optional): lists any major modifications to the survey program, in 3 columns (*Years*, *Component*, *Change_Event*). See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_AndreafskyWeir_OperationalChanges.csv).
+* *ProjectLabel_Data* (required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```. See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_BorderMR_Data.csv).
+* *ProjectLabel_DataConcerns* (optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*). See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_BorderMR_DataConcerns.csv).
+* *ProjectLabel_OperationalChanges* (optional): lists any major modifications to the survey program, in 3 columns (*Years*, *Component*, *Change_Event*). See [this example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/data/Profiles/YkCk_AndreafskyWeir_OperationalChanges.csv).
 
-Compiling short notes on data concerns and operational changes in *csv* format makes it possible to generate compact summary tables inan automated report (see examples at the end of [Report_Source.docx](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)).  
+Compiling short notes on data concerns and operational changes in *csv* format makes it possible to generate compact summary tables in an automated report (see examples at the end of [Report_Source.docx](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/raw/main/Sample_Report_Source.docx)) and the detailed documentation in the appendices of [Pestal et al. 2022](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf)).
 
 
 ### R Code
@@ -92,11 +92,13 @@ generate various [plots](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-S
 
 * [scripts/0_RunAll.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/0_RunAll.R) runs all the other scripts. 
 
-Once you've set up and tested everything, subsequent updates require only 3 steps:
+Once you've set up and tested everything, subsequent updates require only 3 steps by the maintainer of the overall data set:
 
 * Replace the project profile csv files with the latest version
 * Open RStudio, open [scripts/0_RunAll.R](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/scripts/0_RunAll.R), press Ctrl-a to highlight the whole script, and click "Run". This runs the merge, summary, and plotting steps.
 * Open [Sample_Report_Source.Rmd](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/Sample_Report_Source.Rmd) and click "Knit". The data report with all the updated figures and tables will be generated.
+
+The individual contributors never have to interact with anything other than the individual csv files for their projects, and the overall summaries of available data for review. 
 
 ### Tracking Changes
 
@@ -106,7 +108,7 @@ Git and Github are powerful tools for tracking changes in your data and code. Bu
 There are a few important things to remember:
 
 * git is designed for tracking changes in text, such as code or plain-text data files. In those cases, it keeps a very efficient inventory of changes. However, if you have files like xlsx, pdf, docx, or png in your repository, it will keep a full copy of every single version, leading to potential memory problems in the long run.
-You can exclude individual files, file types, or whole subfolders from tracking in the [.gitignore file](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/.gitignore). For details om *.gitignore*, you can start [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
+You can exclude individual files, file types, or whole subfolders from tracking in the [.gitignore file](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/blob/main/.gitignore). For details on *.gitignore*, you can start [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
 * The full power of these change tracking tools can only be realized when there is clear process around changes followed by maintainers for each major change. This includes:
    * issues inventory
    * frequent commits (e.g., after each file update for an individual project, after every chunk of code)
