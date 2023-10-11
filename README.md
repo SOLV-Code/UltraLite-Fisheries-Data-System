@@ -40,7 +40,7 @@ You have three options for browsing through this repository:
 
 * If you just want to have a quick look, keep reading and follow the links below for specific examples of file structure and code.
 
-* If you want a local copy of the key files, click on the green *"<> Code"* button neaer the top of this page, and select *"Download Zip"*.
+* If you want a local copy of the key files, click on the green *"<> Code"* button near the top of this page, and select *"Download Zip"*.
 
 * If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *UltraLite-Fisheries-Data-System.Rproj*
 
