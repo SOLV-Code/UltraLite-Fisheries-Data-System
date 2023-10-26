@@ -1,6 +1,6 @@
 # UltraLite-Fisheries-Data-System
 
-This is a worked example of a very robust, [human-centered](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/wiki/Background:-Human-centered-design) approach for a compiling and managing a common type of fisheries data. 
+This is a worked example of a very robust, [human-centered](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/wiki/1-Human-centered-design) approach for a compiling and managing a common type of fisheries data. 
 
 
 
