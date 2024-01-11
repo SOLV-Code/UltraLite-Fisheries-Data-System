@@ -6,8 +6,6 @@ This is a worked example of a very robust, [human-centered](https://github.com/S
 **Overview presentation from PICES 2023 in Seattle is available [here](http://solv.ca/HumanCenteredDataMgmt/HumanCentered_DataMgmt_Pestal&Tunon_PICES_2023_FULL.pdf).**
 
 
-testing <a href="http://solv.ca/HumanCenteredDataMgmt/HumanCentered_DataMgmt_Pestal&Tunon_PICES_2023_FULL.pdf" target="_blank"> other link</a>
-
 
 
 ## Purpose
