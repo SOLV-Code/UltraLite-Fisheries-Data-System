@@ -3,7 +3,7 @@
 This is a worked example of a very robust, [human-centered](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System/wiki/1-Human-centered-design) approach for a compiling and managing a common type of fisheries data. 
 
 
-**Overview presentation from PICES 2023 in Seattle is available [here](http://solv.ca/HumanCenteredDataMgmt/HumanCentered_DataMgmt_Pestal&Tunon_PICES_2023_FULL.pdf).**
+**Overview presentation from PICES 2023 in Seattle is available [here](https://drive.google.com/drive/folders/1DjgJcDe70dZeFMcW9qCPYFsEafsClxco?usp=sharing).**
 
 
 
